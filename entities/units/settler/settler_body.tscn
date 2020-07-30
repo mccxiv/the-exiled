@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CapsuleMesh" id=1]
+radius = 0.3
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.209981
+
+[node name="KinematicBody" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.730369, 0 )
+
+[node name="WorkerBody" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="WorkerBody"]
+transform = Transform( 0.155506, 0, 0, 0, 0.155506, -4.44089e-16, 0, 4.44089e-16, 0.155506, 0.308857, -9.23491e-09, -0.21127 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

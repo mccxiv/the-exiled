@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.864
+radial_segments = 5
+
+[node name="Log" type="MeshInstance"]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0, 0.06916, 0 )
+mesh = SubResource( 1 )
+material/0 = null

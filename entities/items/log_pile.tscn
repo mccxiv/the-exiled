@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://entities/items/log.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/items/log_pile.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.864
+radial_segments = 5
+
+[node name="LogPile" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Log_1" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, -0.150346, 0.0609835, -0.0412278 )
+mesh = SubResource( 1 )
+
+[node name="Log_2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62509e-07, -0.997473, 0.0710448, 1, -1.62921e-07, 0, 1.15747e-08, 0.0710448, 0.997473, -0.150346, 0.0609835, 0.0876675 )
+mesh = SubResource( 1 )
+
+[node name="Log_3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62842e-07, -0.999514, 0.0311665, 1, -1.62921e-07, 0, 5.07768e-09, 0.0311665, 0.999514, -0.150346, 0.0609835, -0.171558 )
+mesh = SubResource( 1 )
+
+[node name="Log_4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0191802, -0.999816, 0, 0.999816, -0.0191802, 0, 0, 0, 1, -0.150346, 0.166739, 0.00959694 )
+mesh = SubResource( 1 )
+
+[node name="Log_5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, -0.150346, 0.143888, -0.123024 )
+mesh = SubResource( 1 )
+
+[node name="Log_6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, -0.130841, 0.238183, -0.0751913 )
+mesh = SubResource( 1 )

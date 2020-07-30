@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://entities/units/settler/SettlerAI.gd" type="Script" id=1]
+[ext_resource path="res://entities/units/settler/settler_body.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/units/capabilities/CarrierCapabilities.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/units/capabilities/UnitCapabilities.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/units/settler/settler.gd" type="Script" id=5]
+
+[node name="Settler" type="Position3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0553308, 0 )
+script = ExtResource( 5 )
+
+[node name="KinematicBody" parent="." instance=ExtResource( 2 )]
+
+[node name="UnitCapabilities" parent="." instance=ExtResource( 4 )]
+
+[node name="CarrierCapabilities" parent="." instance=ExtResource( 3 )]
+
+[node name="SettlerAI" type="Node" parent="."]
+script = ExtResource( 1 )
