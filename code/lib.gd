@@ -8,8 +8,14 @@ func is_near(subject: Spatial, target: Spatial):
 	var desired_location = nav.get_closest_point(target_loc)
 	return subject_loc.distance_to(desired_location) < 0.1
 
-func get_sibling_of_type(object: Object, class_string: String):
-	for sibling in object.get_parent().get_children():
-		if 'type' in sibling && sibling.type == class_string:
-			return sibling
+func find_of_type(type: String, nodes: Array) -> Node:
+	for node in nodes:
+		if is_of_type(node, type): return node
+	assert(false)
 	return null
+
+func get_siblings(node: Node) -> Array:
+	return node.get_parent().get_children()
+
+func is_of_type(object: Node, type: String) -> bool:
+	return 'type' in object && object.type == type

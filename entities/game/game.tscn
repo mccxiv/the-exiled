@@ -61,7 +61,7 @@ mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
 
 [node name="Settler" parent="Navigation" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 3.49223, 0.730369, -10.9747 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -8.97783, 0.730369, -5.80794 )
 
 [node name="Settler2" parent="Navigation" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.730369, -3.49822 )

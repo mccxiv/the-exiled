@@ -1,9 +1,10 @@
 tool
 extends Node
 class_name CarrierCapabilities
+var type = 'CarrierCapabilities'
 
 var holding = ''
-onready var unit_caps: UnitCapabilities = Lib.get_sibling_of_type(self, 'UnitCapabilities')
+onready var unit_caps: UnitCapabilities = Lib.find_of_type('UnitCapabilities', Lib.get_siblings(self))
 onready var unit: KinematicBody = get_parent()
 
 func _ready():

@@ -1,5 +1,6 @@
 extends Spatial
 class_name LogPile
+var type = 'LogPile'
 
 export var quantity: int = 0 setget _set_quantity
 var logs: Array = []

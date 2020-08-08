@@ -2,10 +2,10 @@ tool
 extends KinematicBody
 class_name Woodcutter
 
-onready var unit: UnitCapabilities = _get_unit_capability()
-onready var carrier: CarrierCapabilities = _get_carrier_capability()
-onready var logPile: LogPile = $'../LogPile'
-onready var idleLocation: WorkerIdleLocation = $'../WorkerIdleLocation'
+onready var unit: UnitCapabilities = Lib.find_of_type('UnitCapabilities', get_children())
+onready var carrier: CarrierCapabilities = Lib.find_of_type('CarrierCapabilities', get_children())
+onready var logPile: LogPile = Lib.find_of_type('LogPile', Lib.get_siblings(self))
+onready var idleLocation: WorkerIdleLocation = Lib.find_of_type('WorkerIdleLocation', Lib.get_siblings(self))
 
 func ai_update(): 
 	if unit.is_moving(): return
@@ -18,7 +18,6 @@ func _ready():
 
 func _drop_off_log():
 	carrier.drop_off_resource(logPile)
-	print('dropping off log')
 
 func _get_carrier_capability() -> CarrierCapabilities:
 	for child in get_children():
