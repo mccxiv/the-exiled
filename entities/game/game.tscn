@@ -1,36 +1,37 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://entities/buildings/woodcutter/woodcutters_hut.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/units/settler/settler.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/units/woodcutter/woodcutter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/game/AITicker.gd" type="Script" id=3]
 [ext_resource path="res://entities/game/MinistryOfManpower.gd" type="Script" id=4]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.521569, 0.521569, 0.521569, 1 )
 
 [sub_resource type="NavigationMesh" id=2]
-vertices = PoolVector3Array( -13.3, 0.341737, -24.4, -24.4, 0.341737, -24.4, -24.4, 0.341737, -16, -4.3, 0.341737, -9.4, -1.9, 0.341737, -9.7, -1.9, 0.341737, -24.4, -13.3, 0.341737, -24.4, -4.3, 0.341737, -7.3, -4.3, 0.341737, -9.4, -13.3, 0.341737, -24.4, -24.4, 0.341737, -16, -24.4, 0.341737, -7.3, 24.5, 0.341737, -16, 24.5, 0.341737, -24.4, 17.9, 0.341737, -24.4, -1.9, 0.341737, -24.4, -1.9, 0.341737, -9.7, 0.200001, 0.341737, -9.4, 4.7, 0.341737, -24.4, 24.5, 0.341737, -16, 17.9, 0.341737, -24.4, 11.3, 0.341737, -24.4, 4.7, 0.341737, -24.4, 0.200001, 0.341737, -9.4, 0.200001, 0.341737, -7.3, 24.5, 0.341737, -7.3, 24.5, 0.341737, -16, 11.3, 0.341737, -24.4, -3.1, 1.34174, -8.5, -3.1, 1.34174, -6.4, -1, 1.34174, -6.4, -1, 1.34174, -8.5, -24.4, 0.341737, 16.4, -24.4, 0.341737, 24.5, -13.3, 0.341737, 24.5, -24.4, 0.341737, 8.6, -24.4, 0.341737, 16.4, -13.3, 0.341737, 24.5, -4, 0.341737, -4.6, -4.3, 0.341737, -7.3, -24.4, 0.341737, -7.3, -24.4, 0.341737, 0.500002, -2.2, 0.341737, -4.3, -4, 0.341737, -4.6, -24.4, 0.341737, 0.500002, -24.4, 0.341737, 8.6, -13.3, 0.341737, 24.5, -2.2, 0.341737, 24.5, 0.200001, 0.341737, -5.5, -0.699999, 0.341737, -5.2, -1, 0.341737, -4.3, 24.5, 0.341737, 0.500002, 24.5, 0.341737, -7.3, 17.6, 0.341737, 24.5, 24.5, 0.341737, 24.5, 24.5, 0.341737, 16.4, 11, 0.341737, 24.5, 17.6, 0.341737, 24.5, 24.5, 0.341737, 16.4, 11, 0.341737, 24.5, 24.5, 0.341737, 16.4, 24.5, 0.341737, 8.6, 4.4, 0.341737, 24.5, 24.5, 0.341737, -7.3, 0.200001, 0.341737, -7.3, 0.200001, 0.341737, -5.5, 24.5, 0.341737, 0.500002, -1, 0.341737, -4.3, -2.2, 0.341737, -4.3, -2.2, 0.341737, 24.5, 4.4, 0.341737, 24.5, 24.5, 0.341737, 8.6 )
-polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 4, 3, 5 ), PoolIntArray( 5, 3, 6 ), PoolIntArray( 8, 7, 9 ), PoolIntArray( 9, 7, 10 ), PoolIntArray( 10, 7, 11 ), PoolIntArray( 14, 13, 12 ), PoolIntArray( 16, 15, 17 ), PoolIntArray( 17, 15, 18 ), PoolIntArray( 21, 20, 19 ), PoolIntArray( 23, 22, 24 ), PoolIntArray( 24, 22, 27 ), PoolIntArray( 24, 27, 26 ), PoolIntArray( 24, 26, 25 ), PoolIntArray( 31, 30, 28 ), PoolIntArray( 28, 30, 29 ), PoolIntArray( 34, 33, 32 ), PoolIntArray( 37, 36, 35 ), PoolIntArray( 39, 38, 40 ), PoolIntArray( 40, 38, 41 ), PoolIntArray( 43, 42, 44 ), PoolIntArray( 44, 42, 45 ), PoolIntArray( 45, 42, 46 ), PoolIntArray( 46, 42, 47 ), PoolIntArray( 49, 48, 50 ), PoolIntArray( 50, 48, 52 ), PoolIntArray( 50, 52, 51 ), PoolIntArray( 55, 54, 53 ), PoolIntArray( 58, 57, 56 ), PoolIntArray( 59, 62, 60 ), PoolIntArray( 60, 62, 61 ), PoolIntArray( 63, 65, 64 ), PoolIntArray( 67, 66, 68 ), PoolIntArray( 68, 66, 71 ), PoolIntArray( 68, 71, 70 ), PoolIntArray( 68, 70, 69 ) ]
+vertices = PoolVector3Array( -12.8501, 0.324132, -24.7002, -23.9501, 0.324132, -24.7002, -23.9501, 0.324132, -16.0002, -4.15014, 0.324132, -9.40017, -1.75014, 0.324132, -9.70017, -1.75014, 0.324132, -24.7002, -12.8501, 0.324132, -24.7002, -4.15014, 0.324132, -7.30017, -4.15014, 0.324132, -9.40017, -12.8501, 0.324132, -24.7002, -23.9501, 0.324132, -16.0002, -23.9501, 0.324132, -7.30017, 24.9499, 0.324132, -16.0002, 24.9499, 0.324132, -24.7002, 18.0499, 0.324132, -24.7002, -1.75014, 0.324132, -24.7002, -1.75014, 0.324132, -9.70017, 0.349859, 0.324132, -9.40017, 4.84986, 0.324132, -24.7002, 4.84986, 0.324132, -24.7002, 0.349859, 0.324132, -9.40017, 0.349859, 0.324132, -7.30017, 24.9499, 0.324132, -7.30017, 24.9499, 0.324132, -16.0002, 11.4499, 0.324132, -24.7002, 24.9499, 0.324132, -16.0002, 18.0499, 0.324132, -24.7002, 11.4499, 0.324132, -24.7002, -2.95014, 1.32413, -8.50017, -2.95014, 1.32413, -6.40017, -0.850142, 1.32413, -6.40017, -0.850142, 1.32413, -8.50017, -23.9501, 0.324132, 16.0998, -23.9501, 0.324132, 24.1998, -13.1501, 0.324132, 24.1998, -23.9501, 0.324132, 8.29983, -23.9501, 0.324132, 16.0998, -13.1501, 0.324132, 24.1998, -3.85014, 0.324132, -4.60017, -4.15014, 0.324132, -7.30017, -23.9501, 0.324132, -7.30017, -23.9501, 0.324132, 0.49983, -2.05014, 0.324132, -4.30017, -3.85014, 0.324132, -4.60017, -23.9501, 0.324132, 0.49983, -23.9501, 0.324132, 8.29983, -13.1501, 0.324132, 24.1998, -2.05014, 0.324132, 24.1998, 0.349859, 0.324132, -5.50017, -0.550142, 0.324132, -5.20017, -0.850142, 0.324132, -4.30017, 24.9499, 0.324132, 0.49983, 24.9499, 0.324132, -7.30017, 18.0499, 0.324132, 24.1998, 24.9499, 0.324132, 24.1998, 24.9499, 0.324132, 16.0998, 11.4499, 0.324132, 24.1998, 18.0499, 0.324132, 24.1998, 24.9499, 0.324132, 16.0998, 11.4499, 0.324132, 24.1998, 24.9499, 0.324132, 16.0998, 24.9499, 0.324132, 8.29983, 4.54986, 0.324132, 24.1998, 24.9499, 0.324132, -7.30017, 0.349859, 0.324132, -7.30017, 0.349859, 0.324132, -5.50017, 24.9499, 0.324132, 0.49983, -0.850142, 0.324132, -4.30017, -2.05014, 0.324132, -4.30017, -2.05014, 0.324132, 24.1998, 4.54986, 0.324132, 24.1998, 24.9499, 0.324132, 8.29983 )
+polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 4, 3, 5 ), PoolIntArray( 5, 3, 6 ), PoolIntArray( 8, 7, 9 ), PoolIntArray( 9, 7, 10 ), PoolIntArray( 10, 7, 11 ), PoolIntArray( 14, 13, 12 ), PoolIntArray( 16, 15, 17 ), PoolIntArray( 17, 15, 18 ), PoolIntArray( 20, 19, 21 ), PoolIntArray( 21, 19, 24 ), PoolIntArray( 21, 24, 23 ), PoolIntArray( 21, 23, 22 ), PoolIntArray( 27, 26, 25 ), PoolIntArray( 31, 30, 28 ), PoolIntArray( 28, 30, 29 ), PoolIntArray( 33, 32, 34 ), PoolIntArray( 37, 36, 35 ), PoolIntArray( 39, 38, 40 ), PoolIntArray( 40, 38, 41 ), PoolIntArray( 43, 42, 44 ), PoolIntArray( 44, 42, 45 ), PoolIntArray( 45, 42, 46 ), PoolIntArray( 46, 42, 47 ), PoolIntArray( 49, 48, 50 ), PoolIntArray( 50, 48, 52 ), PoolIntArray( 50, 52, 51 ), PoolIntArray( 55, 54, 53 ), PoolIntArray( 58, 57, 56 ), PoolIntArray( 60, 59, 61 ), PoolIntArray( 61, 59, 62 ), PoolIntArray( 65, 64, 63 ), PoolIntArray( 67, 66, 68 ), PoolIntArray( 68, 66, 71 ), PoolIntArray( 68, 71, 70 ), PoolIntArray( 68, 70, 69 ) ]
 agent/max_climb = 0.1
 region/min_size = 0.02
 region/merge_size = 3.58
 
-[sub_resource type="CubeMesh" id=3]
-size = Vector3( 1, 1, 1 )
-
-[sub_resource type="PlaneMesh" id=4]
+[sub_resource type="PlaneMesh" id=3]
 size = Vector2( 50, 50 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.717647, 0.87451, 0.607843, 1 )
 
 [node name="Game" type="Spatial"]
 
+[node name="AITicker" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="AITicker"]
+wait_time = 0.5
+autostart = true
+
 [node name="MinistryOfManpower" type="Node" parent="."]
 script = ExtResource( 4 )
-
-[node name="Timer" type="Timer" parent="MinistryOfManpower"]
-autostart = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.783249, -3.96825e-07, -0.621708, 0.518602, 0.551529, 0.653351, 0.34289, -0.834156, 0.431985, -35.1491, -3.95827, -45.283 )
@@ -54,24 +55,17 @@ navmesh = SubResource( 2 )
 [node name="WoodcuttersHut" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98886, 0.471527, -7.39976 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Navigation/NavigationMeshInstance"]
-transform = Transform( 0.0256398, 0, 0, 0, 0.0171642, 0, 0, 0, 0.00725318, 0.0140434, 0.0106997, -0.127395 )
-mesh = SubResource( 3 )
-material/0 = null
-
 [node name="MeshInstance2" type="MeshInstance" parent="Navigation/NavigationMeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449857, -0.0758677, -0.30017 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="Woocutter2" parent="Navigation" instance=ExtResource( 3 )]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="Settler" parent="Navigation" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53089, 0.0454139, -2.79224 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 3.49223, 0.730369, -10.9747 )
 
 [node name="Settler2" parent="Navigation" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0856625, 0.0740511, -3.85124 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.730369, -3.49822 )
 
 [node name="Settler3" parent="Navigation" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80822, 0.0740511, -4.37598 )
-[connection signal="timeout" from="MinistryOfManpower/Timer" to="MinistryOfManpower" method="_on_check_jobs"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, -5.26495, 0.730369, -3.97263 )
+[connection signal="timeout" from="AITicker/Timer" to="AITicker" method="_on_Timer_timeout"]

@@ -3,7 +3,7 @@
 [sub_resource type="CapsuleMesh" id=1]
 radius = 0.3
 
-[sub_resource type="CubeMesh" id=4]
+[sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.209981
@@ -17,7 +17,7 @@ material/0 = null
 
 [node name="MeshInstance" type="MeshInstance" parent="WorkerBody"]
 transform = Transform( 0.155506, 0, 0, 0, 0.155506, -4.44089e-16, 0, 4.44089e-16, 0.155506, 0.308857, -9.23491e-09, -0.21127 )
-mesh = SubResource( 4 )
+mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

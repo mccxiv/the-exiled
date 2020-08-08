@@ -1,3 +1,3 @@
 tool
-extends Position3D
+extends KinematicBody
 class_name Settler

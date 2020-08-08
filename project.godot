@@ -14,7 +14,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://entities/units/capabilities/CarrierCapabilities.gd"
 }, {
-"base": "Position3D",
+"base": "Spatial",
+"class": "LogPile",
+"language": "GDScript",
+"path": "res://entities/items/log_pile.gd"
+}, {
+"base": "KinematicBody",
 "class": "Settler",
 "language": "GDScript",
 "path": "res://entities/units/settler/settler.gd"
@@ -24,7 +29,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://entities/units/capabilities/UnitCapabilities.gd"
 }, {
-"base": "Position3D",
+"base": "KinematicBody",
 "class": "Woodcutter",
 "language": "GDScript",
 "path": "res://entities/units/woodcutter/woodcutter.gd"
@@ -33,19 +38,30 @@ _global_script_classes=[ {
 "class": "WoodcuttersHut",
 "language": "GDScript",
 "path": "res://entities/buildings/woodcutter/woodcutters_hut.gd"
+}, {
+"base": "Position3D",
+"class": "WorkerIdleLocation",
+"language": "GDScript",
+"path": "res://entities/buildings/shared/WorkerIdleLocation.gd"
 } ]
 _global_script_class_icons={
 "CarrierCapabilities": "",
+"LogPile": "",
 "Settler": "",
 "UnitCapabilities": "",
 "Woodcutter": "",
-"WoodcuttersHut": ""
+"WoodcuttersHut": "",
+"WorkerIdleLocation": ""
 }
 
 [application]
 
 config/name="The-exiled"
 run/main_scene="res://entities/game/game.tscn"
+
+[autoload]
+
+Lib="*res://code/lib.gd"
 
 [debug]
 
