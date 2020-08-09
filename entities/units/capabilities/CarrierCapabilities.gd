@@ -3,7 +3,7 @@ extends Node
 class_name CarrierCapabilities
 var type = 'CarrierCapabilities'
 
-var holding = ''
+var holding: String = '' # log, plank, etc...
 onready var unit_caps: UnitCapabilities = Lib.find_of_type('UnitCapabilities', Lib.get_siblings(self))
 onready var unit: KinematicBody = get_parent()
 
@@ -11,11 +11,18 @@ func _ready():
 	assert(unit)
 	assert(unit_caps)
 
-func pick_up_resource(resource_pile_id): 
+func pick_up_resource(resource_pile: ResourcePile):
+	if not Lib.is_at(unit, resource_pile):
+		print('not near, therefore moving to pile') 
+		unit_caps.move_to(resource_pile)
+	else: 
+		print('im near the pile!')
+		resource_pile.remove_one()
+		holding = resource_pile.resource_type
 	pass
 	
-func drop_off_resource(resource_pile: LogPile):
-	if not Lib.is_near(unit, resource_pile):
+func drop_off_resource(resource_pile: ResourcePile):
+	if not Lib.is_at(unit, resource_pile):
 		print('not near, therefore moving to pile') 
 		unit_caps.move_to(resource_pile)
 	else: 

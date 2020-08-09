@@ -18,5 +18,4 @@ func assign_worker (settler: Settler):
 	woodcutter = woodcutterScene.instance()
 	self.add_child(woodcutter)
 	woodcutter.global_transform = position
-	woodcutter.global_scale(Vector3(1.2, 1.2, 1.2))
 	settler.queue_free()
