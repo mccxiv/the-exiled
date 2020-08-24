@@ -1,14 +1,13 @@
 tool
 extends Node
-class_name CarrierCapabilities
-var type = 'CarrierCapabilities'
+class_name BuilderCapabilities
+var type = 'BuilderCapabilities'
 
 onready var unit: UnitCapabilities = Lib.find_of_type('UnitCapabilities', Lib.get_siblings(self))
 onready var body: KinematicBody = get_parent()
 
-var taking: ResourcePile = null
-var dropping: ResourcePile = null
-var holding: String = '' # log, plank, etc...
+var construction_site: ConstructionSite
+var is_building: bool = false
 
 func _ready():
 	assert(body)

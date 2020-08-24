@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/buildings/sawmill/sawmill.gd" type="Script" id=1]
-[ext_resource path="res://entities/items/log_pile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/items/resource_pile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/buildings/shared/WorkerIdleLocation.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]
@@ -20,6 +20,7 @@ script = ExtResource( 1 )
 [node name="LogPile" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02785, -0.509098, 1.98367 )
 quantity = 3
+greedy = true
 
 [node name="PlankPile" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.467451, 0, 0.884019, 0, 1, 0, -0.884019, 0, 0.467451, 1.80055, -0.509098, 1.33976 )

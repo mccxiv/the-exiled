@@ -16,15 +16,23 @@ func get_buildings_that_need_worker() -> Array:
 			buildings.append(building)
 	return buildings
 
-func get_settlers() -> Array:
+func _get_idle_settlers() -> Array:
+	var idles = []
+	for _settler in _get_settlers():
+		var settler: Settler = _settler
+		if settler.is_idle(): idles.append(settler)
+	return idles
+
+func _get_settlers() -> Array:
 	var settlers = []
-	for potential_settler in settlers_root.get_children():
+	for potential_settler in get_tree().get_nodes_in_group('ai'):
 		if potential_settler is Settler: settlers.append(potential_settler)
 	return settlers
 
 func _check_jobs():
-	var settlers: Array = get_settlers()
+	var settlers: Array = _get_idle_settlers()
 	for building in get_buildings_that_need_worker():
 		var available_settler: Settler = settlers.pop_front()
 		if available_settler: 
 			building.assign_worker(available_settler)
+			available_settler.free()

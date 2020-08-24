@@ -1,3 +1,4 @@
+tool 
 extends MeshInstance
 class_name WoodcuttersHut
 
@@ -18,4 +19,3 @@ func assign_worker (settler: Settler):
 	woodcutter = woodcutterScene.instance()
 	self.add_child(woodcutter)
 	woodcutter.global_transform = position
-	settler.queue_free()

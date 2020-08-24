@@ -12,23 +12,27 @@ var is_chopping = false
 
 func ai_update(): 
 	if unit.is_moving(): return
+	if carrier.is_working(): return
 	if is_chopping: return
 	elif carrier.is_holding_resource():
-		if carrier.holding == 'plank': _drop_off_plank()
+		if carrier.holding == 'plank': 
+			_drop_off_plank()
 		elif carrier.holding == 'log': 
 			if _is_at_idle_location():
 				_start_chopping()
 			else: 
 				_go_to_idle_location()
-	elif _logs_available(): _pick_up_log()
-	elif not _is_at_idle_location(): _go_to_idle_location()
+	elif _logs_available(): 
+		_pick_up_log()
+	elif not _is_at_idle_location():
+		_go_to_idle_location()
 	else: pass
 
 func _ready():
 	add_to_group('ai')
 
 func _logs_available() -> bool:
-	return logPile.quantity > 0
+	return logPile.available_for_taking()
 
 func _is_at_idle_location() -> bool:
 	return Lib.is_at(self, idleLocation)

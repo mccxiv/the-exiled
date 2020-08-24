@@ -4,7 +4,7 @@ var type = 'UnitCapabilities'
 
 var path = []
 var path_index = 0
-const move_speed = 3
+const move_speed = 2
 onready var nav: Navigation = get_node('/root/Game/Navigation')
 onready var unit: KinematicBody = get_parent() 
 
@@ -12,7 +12,6 @@ func _ready():
 	pass
 
 func move_to (target: Spatial): 
-	print('Moving')
 	var target_pos = target.global_transform.origin
 	var unit_pos = unit.global_transform.origin
 	var real_target = nav.get_closest_point(target_pos)

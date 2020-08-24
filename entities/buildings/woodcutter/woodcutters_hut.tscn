@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/buildings/woodcutter/woodcutters_hut.gd" type="Script" id=1]
-[ext_resource path="res://entities/items/log_pile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/items/resource_pile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/buildings/shared/WorkerIdleLocation.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]

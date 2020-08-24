@@ -18,4 +18,3 @@ func assign_worker (settler: Settler):
 	sawmiller = sawmillerScene.instance()
 	self.add_child(sawmiller)
 	sawmiller.global_transform = position
-	settler.queue_free()

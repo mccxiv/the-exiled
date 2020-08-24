@@ -11,7 +11,9 @@ func ai_update():
 	if unit.is_moving(): return
 	elif carrier.is_holding_resource(): _drop_off_log()
 	elif not Lib.is_at(self, idleLocation): unit.move_to(idleLocation)
-	elif rand_range(1, 100) < 25: carrier.hold_resource('log')
+	else:
+		if logPile.is_full_virtual(): return
+		if rand_range(1, 100) < 25: carrier.hold_resource('log')
 
 func _ready():
 	add_to_group('ai')

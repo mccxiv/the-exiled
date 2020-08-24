@@ -1,17 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://entities/units/capabilities/CarrierCapabilities.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/units/builder/builder.gd" type="Script" id=1]
 [ext_resource path="res://entities/units/capabilities/UnitCapabilities.tscn" type="PackedScene" id=4]
-[ext_resource path="res://entities/units/settler/settler.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 radius = 0.3
 
 [sub_resource type="CubeMesh" id=2]
 
-[node name="Settler" type="KinematicBody"]
+[node name="Body" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.730369, 0 )
-script = ExtResource( 5 )
+script = ExtResource( 1 )
 
 [node name="WorkerBody" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
@@ -23,5 +22,3 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="UnitCapabilities" parent="." instance=ExtResource( 4 )]
-
-[node name="CarrierCapabilities" parent="." instance=ExtResource( 3 )]
