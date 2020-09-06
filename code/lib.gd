@@ -1,12 +1,23 @@
+tool
 extends Node
 
-onready var nav: Navigation = $"/root/Game/Navigation"
-
 func is_at(subject: Spatial, target: Spatial):
+	var nav: Navigation = $"/root/Game/Navigation"
 	var subject_loc: Vector3 = subject.global_transform.origin
 	var target_loc: Vector3 = target.global_transform.origin
-	var desired_location = nav.get_closest_point(target_loc)
+	var desired_location = adjust_navmesh_vector3(nav.get_closest_point(target_loc))
 	return subject_loc.distance_to(desired_location) < 0.1
+
+func adjust_navmesh_path(path: Array) -> Array:
+	var new_path = []
+	for step in path:
+		new_path.append(adjust_navmesh_vector3(step))
+	return new_path
+
+func adjust_navmesh_vector3(v3: Vector3) -> Vector3:
+	var nmi: NavigationMeshInstance = $"/root/Game/Navigation/NavigationMeshInstance"
+	var new_vector = Vector3(v3.x, v3.y - nmi.navmesh['cell/height'] - 0.05, v3.z)
+	return new_vector
 
 func get_siblings(node: Node) -> Array:
 	return node.get_parent().get_children()

@@ -10,9 +10,10 @@ func ai_update():
 	_check_jobs()
 
 func get_buildings_that_need_worker() -> Array:
+	var all_buildings = get_tree().get_nodes_in_group('buildings')
 	var buildings: Array = []
-	for building in buildings_root.get_children():
-		if (building.has_method('has_worker') && not building.has_worker()):
+	for building in all_buildings:
+		if not building.has_worker():
 			buildings.append(building)
 	return buildings
 

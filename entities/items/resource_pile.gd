@@ -3,6 +3,8 @@ extends Spatial
 class_name ResourcePile
 var type = 'ResourcePile'
 
+signal one_real_removed
+
 export var maximum: int = 6 setget _set_maximum
 export var quantity_real: int = 0 setget _set_quantity_real
 export var quantity_virtual: int = 0 setget _set_quantity_virtual
@@ -15,7 +17,9 @@ func _ready():
 	_render_update()
 	
 func add_one_real(): _set_quantity_real(quantity_real + 1)
-func remove_one_real(): _set_quantity_real(quantity_real - 1)
+func remove_one_real(): 
+	emit_signal('one_real_removed')
+	_set_quantity_real(quantity_real - 1)
 func add_one_virtual():_set_quantity_virtual(quantity_virtual + 1)
 func remove_one_virtual(): _set_quantity_virtual(quantity_virtual - 1)
 func is_full_real() -> bool: return quantity_real >= maximum
@@ -45,12 +49,13 @@ func _show_relevant():
 		if (quantity_real > i): mesh.show()
 
 func _set_quantity_real (quant: int):
+	var before = quantity_real
 	quantity_real = quant
 	quantity_real = clamp(quantity_real, 0, maximum)
-	_render_update()
-	
+	if quantity_real != before:
+		_render_update()
+
 func _set_quantity_virtual (quant: int):
-	if debug: print('set qty ', quant)
 	quantity_virtual = quant
 	quantity_virtual = clamp(quantity_virtual, 0, maximum)
 

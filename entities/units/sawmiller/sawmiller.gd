@@ -1,4 +1,3 @@
-tool
 extends KinematicBody
 class_name Sawmiller
 
@@ -30,6 +29,7 @@ func ai_update():
 
 func _ready():
 	add_to_group('ai')
+	var aa = Lib.get_siblings(self)
 
 func _logs_available() -> bool:
 	return logPile.available_for_taking()

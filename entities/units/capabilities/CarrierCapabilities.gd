@@ -4,7 +4,7 @@ class_name CarrierCapabilities
 var type = 'CarrierCapabilities'
 
 onready var unit: UnitCapabilities = Lib.find_of_type('UnitCapabilities', Lib.get_siblings(self))
-onready var body: KinematicBody = get_parent()
+onready var body: Spatial = get_parent()
 
 var taking: ResourcePile = null
 var dropping: ResourcePile = null

@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "BaseBuilding",
+"language": "GDScript",
+"path": "res://entities/buildings/BaseBuilding.gd"
+}, {
 "base": "KinematicBody",
 "class": "Builder",
 "language": "GDScript",
@@ -62,7 +67,7 @@ _global_script_classes=[ {
 "base": "MeshInstance",
 "class": "WoodcuttersHut",
 "language": "GDScript",
-"path": "res://entities/buildings/woodcutter/woodcutters_hut.gd"
+"path": "res://entities/buildings/woodcutters_hut/woodcutters_hut.gd"
 }, {
 "base": "Position3D",
 "class": "WorkerIdleLocation",
@@ -70,6 +75,7 @@ _global_script_classes=[ {
 "path": "res://entities/buildings/shared/WorkerIdleLocation.gd"
 } ]
 _global_script_class_icons={
+"BaseBuilding": "",
 "Builder": "",
 "BuilderCapabilities": "",
 "CarrierCapabilities": "",
