@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/FpsCounter.gd" type="Script" id=1]
+
+[node name="FpsCounter" type="Label"]
+margin_left = 12.4867
+margin_top = 8.62175
+margin_right = 60.5138
+margin_bottom = 28.5678
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

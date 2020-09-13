@@ -1,2 +1,4 @@
-./addons/
-./assets/
+/addons/
+/assets/
+/.import/
+/.idea/
