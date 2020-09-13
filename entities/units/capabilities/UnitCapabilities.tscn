@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://entities/units/capabilities/UnitCapabilities.gd" type="Script" id=1]
-
-[node name="UnitCapabilities" type="Node"]
-script = ExtResource( 1 )

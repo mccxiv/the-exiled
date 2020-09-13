@@ -12,67 +12,67 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "BaseBuilding",
 "language": "GDScript",
-"path": "res://entities/buildings/BaseBuilding.gd"
+"path": "res://scenes/buildings/BaseBuilding.gd"
 }, {
 "base": "KinematicBody",
 "class": "Builder",
 "language": "GDScript",
-"path": "res://entities/units/builder/builder.gd"
+"path": "res://scenes/units/builder/builder.gd"
 }, {
 "base": "Node",
 "class": "BuilderCapabilities",
 "language": "GDScript",
-"path": "res://entities/units/capabilities/BuilderCapabilities.gd"
+"path": "res://scenes/units/capabilities/BuilderCapabilities.gd"
 }, {
 "base": "Node",
 "class": "CarrierCapabilities",
 "language": "GDScript",
-"path": "res://entities/units/capabilities/CarrierCapabilities.gd"
+"path": "res://scenes/units/capabilities/CarrierCapabilities.gd"
 }, {
 "base": "MeshInstance",
 "class": "ConstructionSite",
 "language": "GDScript",
-"path": "res://entities/buildings/construction_site/construction_site.gd"
+"path": "res://scenes/buildings/construction_site/construction_site.gd"
 }, {
 "base": "Spatial",
 "class": "ResourcePile",
 "language": "GDScript",
-"path": "res://entities/items/resource_pile.gd"
+"path": "res://scenes/items/resource_pile.gd"
 }, {
 "base": "MeshInstance",
 "class": "Sawmill",
 "language": "GDScript",
-"path": "res://entities/buildings/sawmill/sawmill.gd"
+"path": "res://scenes/buildings/sawmill/sawmill.gd"
 }, {
 "base": "KinematicBody",
 "class": "Sawmiller",
 "language": "GDScript",
-"path": "res://entities/units/sawmiller/sawmiller.gd"
+"path": "res://scenes/units/sawmiller/sawmiller.gd"
 }, {
 "base": "KinematicBody",
 "class": "Settler",
 "language": "GDScript",
-"path": "res://entities/units/settler/settler.gd"
+"path": "res://scenes/units/settler/settler.gd"
 }, {
 "base": "Node",
 "class": "UnitCapabilities",
 "language": "GDScript",
-"path": "res://entities/units/capabilities/UnitCapabilities.gd"
+"path": "res://scenes/units/capabilities/UnitCapabilities.gd"
 }, {
 "base": "KinematicBody",
 "class": "Woodcutter",
 "language": "GDScript",
-"path": "res://entities/units/woodcutter/woodcutter.gd"
+"path": "res://scenes/units/woodcutter/woodcutter.gd"
 }, {
 "base": "MeshInstance",
 "class": "WoodcuttersHut",
 "language": "GDScript",
-"path": "res://entities/buildings/woodcutters_hut/woodcutters_hut.gd"
+"path": "res://scenes/buildings/woodcutters_hut/woodcutters_hut.gd"
 }, {
 "base": "Position3D",
 "class": "WorkerIdleLocation",
 "language": "GDScript",
-"path": "res://entities/buildings/shared/WorkerIdleLocation.gd"
+"path": "res://scenes/buildings/shared/WorkerIdleLocation.gd"
 } ]
 _global_script_class_icons={
 "BaseBuilding": "",
@@ -93,7 +93,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The-exiled"
-run/main_scene="res://entities/game/game.tscn"
+run/main_scene="res://scenes/game/game.tscn"
 
 [autoload]
 

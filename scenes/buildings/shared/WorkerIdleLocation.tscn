@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/buildings/shared/WorkerIdleLocation.gd" type="Script" id=1]
+
+[node name="WorkerIdleLocation" type="Position3D"]
+transform = Transform( 0.206579, 0, 0, 0, 0.206579, 0, 0, 0, 0.206579, 0, 0, 0 )
+script = ExtResource( 1 )

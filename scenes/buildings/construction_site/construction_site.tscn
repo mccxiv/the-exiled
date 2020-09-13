@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/buildings/construction_site/construction_site.gd" type="Script" id=1]
+[ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=2]
+
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 3, 0.1, 3 )
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 0.15
+bottom_radius = 0.1
+height = 1.5
+radial_segments = 10
+
+[node name="ConstructionSite" type="MeshInstance"]
+mesh = SubResource( 1 )
+material/0 = null
+script = ExtResource( 1 )
+
+[node name="post" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32643, 0.770467, -1.21967 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="post2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13249, 0.7, 1.20493 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="post3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22294, 0.77, 1.33382 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="post4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24984, 0.77, -1.3302 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Planks" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.993631, 0, 0.112683, 0, 1, 0, -0.112683, 0, 0.993631, 1.06256, 0, 1.85763 )
+resource_type = "plank"
+greedy = true
+[connection signal="one_real_removed" from="Planks" to="." method="_on_plank_removed"]
