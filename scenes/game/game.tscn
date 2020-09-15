@@ -50,11 +50,11 @@ shadow_color = Color( 0.254902, 0.254902, 0.254902, 1 )
 directional_shadow_normal_bias = 0.0
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.766044, -0.377821, 0.520026, 0, 0.809017, 0.587785, -0.642788, -0.450269, 0.619743, 10.059, 14.541, 6.771 )
+transform = Transform( 0.766044, -0.377821, 0.520026, 0, 0.809017, 0.587785, -0.642788, -0.45027, 0.619743, 9.489, 11.154, 6.786 )
 environment = SubResource( 1 )
 projection = 1
 fov = 27.8
-size = 18.0
+size = 12.0
 
 [node name="Navigation" type="Navigation" parent="."]
 
