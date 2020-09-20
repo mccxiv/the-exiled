@@ -1,16 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://assets/vox/block-grass.vox" type="ArrayMesh" id=2]
 [ext_resource path="res://assets/vox/block-sand.vox" type="ArrayMesh" id=3]
 [ext_resource path="res://assets/vox/building-sawmill.vox" type="ArrayMesh" id=4]
+[ext_resource path="res://assets/vox/tree.vox" type="ArrayMesh" id=5]
+[ext_resource path="res://assets/vox/deco-grass.vox" type="ArrayMesh" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.7636, 0.813127, 0.92, 1 )
+albedo_color = Color( 0.506, 0.8786, 0.92, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
-size = Vector2( 100, 100 )
+size = Vector2( 10000, 10000 )
 
 [sub_resource type="BakedLightmapData" id=3]
 bounds = AABB( -10, -10, -10, 20, 20, 20 )
@@ -20,54 +22,178 @@ octree = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 [node name="Spatial" type="Spatial"]
 
+[node name="Terrain" type="Spatial" parent="."]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+
+[node name="block-sand" type="MeshInstance" parent="Terrain"]
+transform = Transform( 13.8977, 0, 0, 0, 2.57854, 0, 0, 0, 7.47264, -0.506292, -1.51273, -1.77364 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand2" type="MeshInstance" parent="Terrain"]
+transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -13.8977, 0, -3.26639e-07, -6.3599, -1.94097, -6.44011 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand3" type="MeshInstance" parent="Terrain"]
+transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -13.8977, 0, -3.26639e-07, 0.285388, -0.075835, -11.7865 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand5" type="MeshInstance" parent="Terrain"]
+transform = Transform( -6.07486e-07, 0, 7.47264, 0, 1.71021, 0, 6.83826, 0, 1.6072e-07, 5.24693, 0.154629, -7.14974 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand6" type="MeshInstance" parent="Terrain"]
+transform = Transform( -6.07486e-07, 0, 7.47264, 0, 1.71021, 0, 6.83826, 0, 1.6072e-07, 1.51006, -0.393373, -5.22437 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand7" type="MeshInstance" parent="Terrain"]
+transform = Transform( -2.33558e-07, 0, 2.87298, 0, 1.71021, 0, 6.83826, 0, 1.6072e-07, 1.38523, -0.0613077, -6.35011 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand8" type="MeshInstance" parent="Terrain"]
+transform = Transform( -2.33558e-07, 0, 2.87298, 0, 1.71021, 0, 6.83826, 0, 1.6072e-07, 3.89251, 0.393385, -8.46988 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand9" type="MeshInstance" parent="Terrain"]
+transform = Transform( -3.47123e-07, 0, 4.26994, 0, 4.66924, 0, 6.83826, 0, 1.6072e-07, -3.44617, 0.0898373, -10.233 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-sand4" type="MeshInstance" parent="Terrain"]
+transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -6.39222, 0, -1.50238e-07, -4.94239, -0.861605, -13.4757 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="block-grass" type="MeshInstance" parent="Terrain"]
+transform = Transform( 18.9218, 0, 0, 0, 1, 0, 0, 0, -19.4239, -4.47676, -0.82967, -5.82781 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="block-grass2" type="MeshInstance" parent="Terrain"]
+transform = Transform( 18.9218, 0, 0, 0, 1, 0, 0, 0, -9.85822, 0.111988, -0.82967, -6.88927 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="block-grass3" type="MeshInstance" parent="Terrain"]
+transform = Transform( 18.9218, 0, 0, 0, 1, 0, 0, 0, -9.85822, -2.08292, -0.82967, -12.5722 )
+mesh = ExtResource( 2 )
+material/0 = null
+
 [node name="ocean" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.066283, 2.38419e-07, -0.0218539 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.707107, -0.37471, 0.599661, 0, 0.848048, 0.529919, -0.707107, -0.374709, 0.599661, 8.128, 9.886, 6.584 )
+transform = Transform( 0.707107, -0.415627, 0.572062, 0, 0.809017, 0.587785, -0.707107, -0.415627, 0.572062, 22.756, 26.566, 17.079 )
 environment = ExtResource( 1 )
 projection = 1
-size = 19.1
-far = 80.0
-
-[node name="block-sand" type="MeshInstance" parent="."]
-transform = Transform( 13.8977, 0, 0, 0, 2.57854, 0, 0, 0, 7.47264, -0.506292, -1.51273, -1.77364 )
-mesh = ExtResource( 3 )
-material/0 = null
-
-[node name="block-sand2" type="MeshInstance" parent="."]
-transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -13.8977, 0, -3.26639e-07, -6.3599, -1.94097, -6.44011 )
-mesh = ExtResource( 3 )
-material/0 = null
-
-[node name="block-sand3" type="MeshInstance" parent="."]
-transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -13.8977, 0, -3.26639e-07, 0.285388, -0.075835, -11.7865 )
-mesh = ExtResource( 3 )
-material/0 = null
-
-[node name="block-sand4" type="MeshInstance" parent="."]
-transform = Transform( -6.07486e-07, 0, 7.47264, 0, 2.57854, 0, -6.39222, 0, -1.50238e-07, -4.94239, -0.861605, -13.4757 )
-mesh = ExtResource( 3 )
-material/0 = null
-
-[node name="block-grass" type="MeshInstance" parent="."]
-transform = Transform( 18.9218, 0, 0, 0, 1, 0, 0, 0, -19.4239, -4.47676, -0.82967, -5.82781 )
-mesh = ExtResource( 2 )
-material/0 = null
+size = 20.65
+near = 0.01
+far = 105.3
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.292366, -0.645477, 0.705607, -0.428878, 0.570984, 0.70003, -0.854743, -0.507285, -0.109894, 2.32045, 0.566501, 6.62537 )
+transform = Transform( 0.929241, -0.209491, -0.304343, 0.369303, 0.501564, 0.782336, -0.0112447, -0.839373, 0.543439, 2.32045, 0.566501, 6.62537 )
 light_color = Color( 0.760784, 0.721569, 0.670588, 1 )
 shadow_enabled = true
-shadow_bias = -0.2
+shadow_bias = -0.22
 directional_shadow_mode = 0
-directional_shadow_normal_bias = 1.0
+directional_shadow_normal_bias = 1.41
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08828, 0.979439, -1.00576 )
+transform = Transform( 0.999133, 0, 0.0416315, 0, 1, 0, -0.0416315, 0, 0.999133, -3.08828, 4.19479, -1.00576 )
 mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( -0.929532, 0, -0.368741, 0, 1, 0, 0.368741, 0, -0.929532, 12.2256, 4.36916, 5.46328 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="."]
+transform = Transform( -0.929532, 0, -0.368741, 0, 1, 0, 0.368741, 0, -0.929532, 19.0848, 5.4112, -9.42819 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="."]
+transform = Transform( 0.133675, 0, 0.991025, 0, 1, 0, -0.991025, 0, 0.133675, 23.4799, 4.37074, -12.2417 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="."]
+transform = Transform( -0.440644, 0, -0.897682, 0, 1, 0, 0.897682, 0, -0.440644, 23.3098, 4.13053, -2.22457 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 0.901425, 0, 0.432936, 0, 1, 0, -0.432936, 0, 0.901425, 23.1022, 4.36916, 6.02784 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="."]
+transform = Transform( 0.979994, 0, -0.199026, 0, 1, 0, 0.199026, 0, 0.979994, 18.9085, 4.36916, 3.49758 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="."]
+transform = Transform( 0.979994, 0, -0.199026, 0, 1, 0, 0.199026, 0, 0.979994, 14.8718, 4.36916, 1.43943 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( 0.820471, 0, -0.571688, 0, 1, 0, 0.571688, 0, 0.820471, 8.70898, 4.36916, 3.09453 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance18" type="MeshInstance" parent="."]
+transform = Transform( 0.999102, 0, 0.0423814, 0, 1, 0, -0.0423814, 0, 0.999102, -4.93669, 0.890289, 3.09453 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance19" type="MeshInstance" parent="."]
+transform = Transform( 0.999102, 0, 0.0423814, 0, 1, 0, -0.0423814, 0, 0.999102, -6.74456, 0.890289, -0.74347 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="."]
+transform = Transform( 0.820471, 0, -0.571688, 0, 1, 0, 0.571688, 0, 0.820471, 2.60143, 4.26396, 3.09453 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="."]
+transform = Transform( 0.885629, 0, 0.464394, 0, 1, 0, -0.464394, 0, 0.885629, 2.60143, 4.26396, 1.99472 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="."]
+transform = Transform( -0.978249, 0, -0.207434, 0, 1, 0, 0.207434, 0, -0.978249, 1.5521, 4.26396, 1.99472 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance14" type="MeshInstance" parent="."]
+transform = Transform( -0.270029, 0, -0.962852, 0, 1, 0, 0.962852, 0, -0.270029, 1.26482, 4.26396, 3.05801 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance17" type="MeshInstance" parent="."]
+transform = Transform( -0.270029, 0, -0.962852, 0, 1, 0, 0.962852, 0, -0.270029, 0.871061, 4.26396, 3.82335 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance15" type="MeshInstance" parent="."]
+transform = Transform( 0.966457, 0, -0.256829, 0, 1, 0, 0.256829, 0, 0.966457, 0.0410428, 4.26396, 3.05801 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="MeshInstance16" type="MeshInstance" parent="."]
+transform = Transform( 0.826246, 0, -0.563309, 0, 1, 0, 0.563309, 0, 0.826246, 0.559741, 4.26396, 1.50567 )
+mesh = ExtResource( 6 )
 material/0 = null
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]

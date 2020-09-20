@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/blocks/grass.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/blocks/rock-block.vox" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/blocks/water.vox" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/blocks/tree3.vox" type="ArrayMesh" id=4]
+[ext_resource path="res://assets/blocks/tree2.vox" type="ArrayMesh" id=5]
+[ext_resource path="res://assets/blocks/grass-deco.vox" type="ArrayMesh" id=6]
+[ext_resource path="res://assets/blocks/tree1.vox" type="ArrayMesh" id=7]
+[ext_resource path="res://assets/blocks/beach.vox" type="ArrayMesh" id=8]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="rock-block" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="water" type="MeshInstance" parent="."]
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="grass" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="tree1" type="MeshInstance" parent="."]
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="tree2" type="MeshInstance" parent="."]
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="tree3" type="MeshInstance" parent="."]
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="grass-deco" type="MeshInstance" parent="."]
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="beach" type="MeshInstance" parent="."]
+mesh = ExtResource( 8 )
+material/0 = null

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/game/Terrain.gd" type="Script" id=1]
 [ext_resource path="res://scenes/units/settler/settler.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/buildings/BaseBuilding.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/vox/human-villager.vox" type="ArrayMesh" id=10]
 [ext_resource path="res://ui/FpsCounter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/vox/building-moai-smaller.vox" type="ArrayMesh" id=12]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.521569, 0.521569, 0.521569, 1 )
@@ -50,11 +51,13 @@ shadow_color = Color( 0.254902, 0.254902, 0.254902, 1 )
 directional_shadow_normal_bias = 0.0
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.766044, -0.377821, 0.520026, 0, 0.809017, 0.587785, -0.642788, -0.45027, 0.619743, 9.489, 11.154, 6.786 )
+transform = Transform( 0.766044, -0.377821, 0.520026, 0, 0.809017, 0.587785, -0.642788, -0.45027, 0.619743, 22.851, 25, 22.886 )
 environment = SubResource( 1 )
 projection = 1
 fov = 27.8
-size = 12.0
+size = 12.55
+near = 0.01
+far = 70.0
 
 [node name="Navigation" type="Navigation" parent="."]
 
@@ -111,6 +114,11 @@ material/0 = null
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.036, 0, -1.149 )
 mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.323, -0.031, -0.081 )
+mesh = ExtResource( 12 )
 material/0 = null
 
 [node name="UI" type="CanvasLayer" parent="."]
