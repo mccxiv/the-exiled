@@ -28,6 +28,13 @@ func find_of_type(type: String, nodes: Array) -> Node:
 	assert(false)
 	return null
 
+func find_of_class(className: String, nodes: Array) -> Node:
+	for node in nodes:
+		if node.get_class() == className: return node
+	assert(false)
+	return null
+
+
 func filter_of_type(type: String, nodes: Array) -> Array:
 	var result = []
 	for node in nodes:
