@@ -43,6 +43,8 @@ __meta__ = {
 [node name="Settler" parent="navigationAstar" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07907, 2.07733, 14.5396 )
 
+[node name="Node" type="Node" parent="navigationAstar"]
+
 [node name="water" type="MeshInstance" parent="."]
 transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0.344955, -0.486109, -0.801296 )
 mesh = ExtResource( 2 )
