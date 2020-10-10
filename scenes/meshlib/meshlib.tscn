@@ -11,6 +11,11 @@
 
 [node name="Spatial" type="Spatial"]
 
+[node name="block-grass" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20758, 0, 2.4268 )
+mesh = ExtResource( 1 )
+material/0 = null
+
 [node name="block-rock" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20223, 0, 0 )
 mesh = ExtResource( 2 )
@@ -19,16 +24,6 @@ material/0 = null
 [node name="block-water" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5102, 0, 0 )
 mesh = ExtResource( 3 )
-material/0 = null
-
-[node name="block-grass" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20758, 0, 2.4268 )
-mesh = ExtResource( 1 )
-material/0 = null
-
-[node name="block-beach" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48095, 0, 0 )
-mesh = ExtResource( 8 )
 material/0 = null
 
 [node name="tree-1" type="MeshInstance" parent="." groups=[
@@ -51,4 +46,9 @@ material/0 = null
 [node name="decoration-grass" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0568, 0, -4.89127 )
 mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="block-beach" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48095, 0, 0 )
+mesh = ExtResource( 8 )
 material/0 = null
