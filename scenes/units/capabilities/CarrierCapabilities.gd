@@ -25,7 +25,7 @@ func pick_up_resource(resource_pile: ResourcePile):
 		if not resource_pile.available_for_taking(): return
 		taking = resource_pile
 		resource_pile.remove_one_virtual()
-	if not Lib.is_at(body, resource_pile):
+	if not unit.is_at(resource_pile):
 		unit.move_to(resource_pile)
 	else: 
 		resource_pile.remove_one_real()
@@ -37,7 +37,7 @@ func drop_off_resource(resource_pile: ResourcePile):
 		if not resource_pile.available_for_placing(): return
 		dropping = resource_pile
 		resource_pile.add_one_virtual()
-	if not Lib.is_at(body, resource_pile):
+	if not unit.is_at(resource_pile):
 		unit.move_to(resource_pile)
 	else: 
 		resource_pile.add_one_real()

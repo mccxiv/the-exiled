@@ -34,6 +34,12 @@ func find_of_class(className: String, nodes: Array) -> Node:
 	assert(false)
 	return null
 
+func find_ancestor_of_type(object: Node, type: String) -> Node:
+	var parent = object.get_parent()
+	while parent:
+		if 'type' in parent && parent.type == type: return parent
+		else: parent = parent.get_parent()
+	return null
 
 func filter_of_type(type: String, nodes: Array) -> Array:
 	var result = []

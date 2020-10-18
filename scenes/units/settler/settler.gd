@@ -26,6 +26,7 @@ func ai_update():
 	else:
 		var pile: ResourcePile = _get_pile_that_needs_moving()
 		if pile:
+			print('want to pick up resource')
 			carrier.pick_up_resource(pile)
 
 func _get_greedy_pile_with_space(resource_id: String) -> ResourcePile:

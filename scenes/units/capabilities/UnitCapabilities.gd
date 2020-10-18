@@ -5,23 +5,28 @@ var type = 'UnitCapabilities'
 
 var path = []
 var path_index = 0
-const move_speed = 2 
+const move_speed = 2
 onready var unit: Spatial = get_parent() 
+onready var nav: MapNavigation = Lib.find_ancestor_of_type(self, 'MapNavigation')
 
 func _ready():
+	assert(nav)
 	pass
 
 func move_to (target: Spatial): 
-	var nav: Navigation = get_node('/root/Game/Navigation')
-	var target_pos = target.global_transform.origin
 	var unit_pos = unit.global_transform.origin
-	var real_target: Vector3 = nav.get_closest_point(target_pos)
-	var offset_path = nav.get_simple_path(unit_pos, real_target)
-	path = Lib.adjust_navmesh_path(offset_path)
+	var target_pos = target.global_transform.origin
+	path = nav.generate_path(unit_pos, target_pos)
 	path_index = 0
 
 func is_moving():
 	return bool(path.size())
+
+func is_at(target: Spatial) -> bool:
+	var unit_pos = unit.global_transform.origin
+	var target_pos = target.global_transform.origin
+	var potential_path = nav.generate_path(unit_pos, target_pos)
+	return potential_path.size() == 1
 
 func _physics_process(_delta):
 	if path_index < path.size():

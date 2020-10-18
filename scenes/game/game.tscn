@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/game/Terrain.gd" type="Script" id=1]
 [ext_resource path="res://scenes/units/settler/settler.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/game/AITicker.gd" type="Script" id=3]
+[ext_resource path="res://scenes/managers/ai/ai_ticker.gd" type="Script" id=3]
 [ext_resource path="res://scenes/game/MinistryOfManpower.gd" type="Script" id=4]
 [ext_resource path="res://assets/vox/deco-grass.vox" type="ArrayMesh" id=5]
 [ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=6]
@@ -66,7 +66,6 @@ navmesh = SubResource( 2 )
 
 [node name="BaseBuilding" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23725, 0, -7.55146 )
-building_type = "woodcutters_hut"
 
 [node name="ResourcePile" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 6 )]
 transform = Transform( 0.76374, 0, 0.645524, 0, 1, 0, -0.645524, 0, 0.76374, 1.99355, 0, -6.76549 )
