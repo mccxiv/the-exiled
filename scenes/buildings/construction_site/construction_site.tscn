@@ -3,7 +3,6 @@
 [ext_resource path="res://scenes/buildings/construction_site/construction_site.gd" type="Script" id=1]
 [ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=2]
 
-
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 3, 0.1, 3 )
 

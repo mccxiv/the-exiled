@@ -20,7 +20,7 @@ func ai_update():
 	if is_building: return
 	if construction_site:
 		if carrier.holding:
-			if Lib.is_at(body, construction_site): 
+			if unit.is_at(construction_site): 
 				build()
 			else:
 				print('moving to construction')
