@@ -105,10 +105,11 @@ run/main_scene="res://scenes/game/gridmap-game.tscn"
 
 Lib="*res://code/lib.gd"
 Constants="*res://code/constants.gd"
+MinistryOfManpower="*res://code/MinistryOfManpower.gd"
 
 [debug]
 
-settings/fps/force_fps=120
+settings/fps/force_fps=60
 gdscript/warnings/unsafe_property_access=true
 gdscript/warnings/unsafe_method_access=true
 gdscript/warnings/unsafe_cast=true

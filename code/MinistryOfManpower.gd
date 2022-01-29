@@ -4,6 +4,7 @@ onready var buildings_root: Node = get_node('../Navigation/NavigationMeshInstanc
 onready var settlers_root: Node = get_node('../Navigation')
 
 func _ready():
+	print('Starting MoM')
 	add_to_group('ai')
 
 func ai_update():

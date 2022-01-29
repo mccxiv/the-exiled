@@ -10,7 +10,7 @@ onready var idleLocation: WorkerIdleLocation = Lib.find_of_type('WorkerIdleLocat
 func ai_update(): 
 	if unit.is_moving(): return
 	elif carrier.is_holding_resource(): _drop_off_log()
-	elif not Lib.is_at(self, idleLocation): unit.move_to(idleLocation)
+	elif not unit.is_at(idleLocation): unit.move_to(idleLocation)
 	else:
 		if logPile.is_full_virtual(): return
 		if rand_range(1, 100) < 25: carrier.hold_resource('log')
