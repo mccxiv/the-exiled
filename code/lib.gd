@@ -1,12 +1,12 @@
 tool
 extends Node
 
-func is_at(subject: Spatial, target: Spatial):
-	var nav: Navigation = $"/root/Game/Navigation"
-	var subject_loc: Vector3 = subject.global_transform.origin
-	var target_loc: Vector3 = target.global_transform.origin
-	var desired_location = adjust_navmesh_vector3(nav.get_closest_point(target_loc))
-	return subject_loc.distance_to(desired_location) < 0.1
+#func is_at(subject: Spatial, target: Spatial):
+#	var nav: Navigation = $"/root/Game/Navigation"
+#	var subject_loc: Vector3 = subject.global_transform.origin
+#	var target_loc: Vector3 = target.global_transform.origin
+#	var desired_location = adjust_navmesh_vector3(nav.get_closest_point(target_loc))
+#	return subject_loc.distance_to(desired_location) < 0.1
 
 func adjust_navmesh_path(path: Array) -> Array:
 	var new_path = []

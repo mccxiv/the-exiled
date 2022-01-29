@@ -35,7 +35,7 @@ func _logs_available() -> bool:
 	return logPile.available_for_taking()
 
 func _is_at_idle_location() -> bool:
-	return Lib.is_at(self, idleLocation)
+	return unit.is_at(idleLocation)
 
 func _go_to_idle_location():
 	unit.move_to(idleLocation)

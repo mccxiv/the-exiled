@@ -68,7 +68,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93004, 2.13495, 19.6418 )
 building_type = "sawmill"
 
 [node name="Sawmill" parent="MapNavigation/buildings" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9479, 2.27026, 29.5735 )
+transform = Transform( 0.0189531, 0, 0.99982, 0, 1, 0, -0.99982, 0, 0.0189531, -10.9479, 2.27026, 29.5735 )
 
 [node name="resources" type="Node" parent="MapNavigation"]
 
@@ -101,13 +101,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17283, 2.01156, 20.4892 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19899, 2.32843, -4.19769 )
 
 [node name="Builder" parent="MapNavigation/units" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.06955, 2.2597, 11.5616 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.45828, 2.2597, 21.0744 )
 
 [node name="Settler4" parent="MapNavigation/units" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47466, 1.99216, 21.9982 )
 
 [node name="Settler5" parent="MapNavigation/units" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47466, 1.99216, 16.759 )
+
+[node name="Settler6" parent="MapNavigation/units" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68847, 1.99216, 21.9982 )
+
+[node name="Settler7" parent="MapNavigation/units" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09786, 1.99216, 21.9982 )
+
+[node name="Settler8" parent="MapNavigation/units" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68847, 1.99216, 24.51 )
+
+[node name="Settler9" parent="MapNavigation/units" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68847, 1.99216, 19.4291 )
+
+[node name="Settler10" parent="MapNavigation/units" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22659, 1.99216, 21.9982 )
 
 [node name="water" type="MeshInstance" parent="."]
 transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, -7.70035, -0.77627, 26.2628 )
