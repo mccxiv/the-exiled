@@ -21,7 +21,7 @@ func ai_update():
 				_start_chopping()
 			else: 
 				_go_to_idle_location()
-	elif _logs_available(): 
+	elif _there_is_space_for_plank() && _logs_available(): 
 		_pick_up_log()
 	elif not _is_at_idle_location():
 		_go_to_idle_location()
@@ -33,6 +33,9 @@ func _ready():
 
 func _logs_available() -> bool:
 	return logPile.available_for_taking()
+	
+func _there_is_space_for_plank() -> bool:
+	return plankPile.available_for_placing()
 
 func _is_at_idle_location() -> bool:
 	return unit.is_at(idleLocation)

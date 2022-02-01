@@ -67,12 +67,12 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -6.4094
 [node name="BaseBuilding2" parent="MapNavigation/buildings" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85525, 2.05869, -14.9948 )
 
-[node name="ConstructionSite" parent="MapNavigation/buildings" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93004, 2.13495, 19.6418 )
-building_type = "sawmill"
-
 [node name="Sawmill" parent="MapNavigation/buildings" instance=ExtResource( 12 )]
-transform = Transform( 0.0189531, 0, 0.99982, 0, 1, 0, -0.99982, 0, 0.0189531, -10.9479, 2.27026, 29.5735 )
+transform = Transform( 0.999534, 0, 0.0305036, 0, 1, 0, -0.0305036, 0, 0.999534, -10.9479, 2.27026, 29.5735 )
+
+[node name="ConstructionSite" parent="MapNavigation/buildings" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57373, 2.09894, 23.3165 )
+building_type = "sawmill"
 
 [node name="resources" type="Node" parent="MapNavigation"]
 

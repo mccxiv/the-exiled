@@ -28,9 +28,9 @@ func _on_plank_removed():
 	planks_pile.maximum -= 1
 
 func replace_with_finished_building():
-	var position: Transform = self.global_transform
+	var position = self.global_transform.origin
 	var building = BaseBuilding.instance()
-	building.global_transform = position
+	building.global_transform.origin = position
 	building.building_type = building_type
 	get_parent().add_child(building)
 	self.queue_free()

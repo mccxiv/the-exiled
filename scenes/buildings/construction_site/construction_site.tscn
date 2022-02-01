@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CubeMesh" id=1]
-size = Vector3( 3, 0.1, 3 )
+size = Vector3( 2, 0.1, 2 )
 
 [sub_resource type="CylinderMesh" id=2]
 top_radius = 0.15
@@ -18,27 +18,27 @@ material/0 = null
 script = ExtResource( 1 )
 
 [node name="post" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32643, 0.770467, -1.21967 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.926818, 0.120092, -0.897023 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="post2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13249, 0.7, 1.20493 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.926379, 0.119301, 0.965535 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="post3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22294, 0.77, 1.33382 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.886864, 0.154552, 0.931713 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="post4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24984, 0.77, -1.3302 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.849709, 0.139604, -0.906151 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Planks" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.993631, 0, 0.112683, 0, 1, 0, -0.112683, 0, 0.993631, 1.06256, 0, 1.85763 )
+transform = Transform( 0.993631, 0, 0.112683, 0, 1, 0, -0.112683, 0, 0.993631, 0.929427, 0, 1.3347 )
 maximum = 3
 resource_type = "plank"
 greedy = true
