@@ -28,13 +28,18 @@ func is_at(target: Spatial) -> bool:
 	var potential_path = nav.generate_path(unit_pos, target_pos)
 	return potential_path.size() == 1
 
-func _physics_process(_delta):
+func _physics_process(delta):		
 	if path_index < path.size():
 		var next_point: Vector3 = path[path_index]
 		var move_vec = next_point - unit.global_transform.origin
 		var normalized = move_vec.normalized()
+		if get_parent().get('debug'):
+			print('[DBG] ----------')
+			print('[DBG]: move_vec:', move_vec)
+			print('[DBG]: normalized:', normalized)
 		if move_vec.length() < 0.2:
 			path_index += 1
 		else:
-			unit.move_and_slide(move_vec.normalized() * move_speed, Vector3(0, 1, 0))
+			unit.rotation.y = lerp(unit.rotation.y, atan2(-move_vec.x, -move_vec.z), delta * 5)
+			unit.move_and_slide(move_vec.normalized() * move_speed, Vector3.UP)
 	else: path = []

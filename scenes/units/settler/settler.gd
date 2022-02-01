@@ -3,6 +3,7 @@ extends KinematicBody
 class_name Settler
 var type = 'Settler'
 
+export var debug: bool = false
 onready var unit: UnitCapabilities = Lib.find_of_type('UnitCapabilities', get_children())
 onready var carrier: CarrierCapabilities = Lib.find_of_type('CarrierCapabilities', get_children())
 

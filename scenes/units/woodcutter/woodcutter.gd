@@ -1,6 +1,7 @@
 tool
 extends KinematicBody
 class_name Woodcutter
+var type = 'Woodcutter'
 
 onready var unit: UnitCapabilities = Lib.find_of_type('UnitCapabilities', get_children())
 onready var carrier: CarrierCapabilities = Lib.find_of_type('CarrierCapabilities', get_children())
