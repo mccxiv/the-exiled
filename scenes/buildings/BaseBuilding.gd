@@ -9,12 +9,14 @@ onready var building_scene: PackedScene = building_metadata['building']
 onready var worker_scene: PackedScene = building_metadata['worker']
 var building_instance = null
 var worker_instance = null
+var desired_position = null
 
 func _ready():
 	add_to_group('buildings')
 	building_instance = building_scene.instance()
 	add_child(building_instance)
-	# building_instance.set_owner(get_tree().edited_scene_root)
+	if self.desired_position:
+		self.global_transform.origin = self.desired_position
 	assert(building_scene)
 	assert(worker_scene)
 
