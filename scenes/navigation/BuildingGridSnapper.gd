@@ -9,7 +9,10 @@ func _ready():
 func add_child (node: Node, legible_unique_name = false):
 	call_deferred('_unsafe_add_child', node)
 	print('Building will be added to world')
-	
+
+func remove_child (node: Node):
+	get_parent().remove_building(node)
+
 func _unsafe_add_child (node: Node):
 	.add_child(node)
 	get_parent().add_building(node)

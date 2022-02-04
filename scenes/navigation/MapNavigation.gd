@@ -46,6 +46,13 @@ func add_building(building: Spatial):
 	_snap_building_to_grid(building)
 	_add_building_to_navigation_map(building)
 
+func remove_building (building: Spatial):
+	var grid_pos = grid.world_to_map(building.translation)
+	if grid_has_building[String(grid_pos)] == true:
+		print('Deleting building from navmap', String(grid_pos))
+		grid_has_building.erase(String(grid_pos))
+		_create_map_of_points()
+
 func _add_queued_buildings():
 	for building_pos in queued_buildings:
 		add_building(building_pos)
@@ -53,15 +60,7 @@ func _add_queued_buildings():
 
 func _add_building_to_navigation_map (building: Spatial):
 	var grid_pos = grid.world_to_map(building.translation)
-	# Buildings used to be 2x2, so we needed this code
-	#	var occupied_cubes = [
-	#		grid_pos,
-	#		grid_pos + Vector3(0, 0, 1), 
-	#		grid_pos + Vector3(1, 0, 0),
-	#		grid_pos + Vector3(1, 0, 1),
-	#	]
-	#	for occupied_cube in occupied_cubes:
-	#		grid_has_building[String(occupied_cube)] = true
+	print('Adding building to navmap', String(grid_pos))
 	grid_has_building[String(grid_pos)] = true
 	_create_map_of_points()
 

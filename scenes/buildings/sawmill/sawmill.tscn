@@ -17,8 +17,6 @@ greedy = true
 
 [node name="PlankPile" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.913666, 0, 0.406466, 0, 1, 0, -0.406466, 0, 0.913666, 0.776889, -0.00630897, 1.22355 )
-quantity_real = 5
-quantity_virtual = 5
 resource_type = "plank"
 
 [node name="WorkerIdleLocation" parent="." instance=ExtResource( 4 )]
