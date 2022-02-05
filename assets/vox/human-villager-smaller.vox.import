@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/human-villager-smaller.vox-a49d2add55587a21d6c2360509b9cfbf.mesh"
+
+[deps]
+
+source_file="res://assets/vox/human-villager-smaller.vox"
+dest_files=[ "res://.import/human-villager-smaller.vox-a49d2add55587a21d6c2360509b9cfbf.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

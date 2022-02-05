@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/vox/human-villager.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/vox/human-villager-smaller.vox" type="ArrayMesh" id=1]
 
 [node name="WorkerBody" type="MeshInstance"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )

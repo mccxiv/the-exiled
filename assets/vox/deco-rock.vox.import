@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/deco-rock.vox-819ce41ebe99a62b8c26404b09b3587c.mesh"
+
+[deps]
+
+source_file="res://assets/vox/deco-rock.vox"
+dest_files=[ "res://.import/deco-rock.vox-819ce41ebe99a62b8c26404b09b3587c.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

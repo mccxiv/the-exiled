@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/building-sawmill-small.vox-57dc1fad9a1723a72f5536281754ff4e.mesh"
+
+[deps]
+
+source_file="res://assets/blocks/building-sawmill-small.vox"
+dest_files=[ "res://.import/building-sawmill-small.vox-57dc1fad9a1723a72f5536281754ff4e.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

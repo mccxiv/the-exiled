@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/block-grass.vox-c994584e2d27063e1353175eb580abac.mesh"
+
+[deps]
+
+source_file="res://assets/vox/block-grass.vox"
+dest_files=[ "res://.import/block-grass.vox-c994584e2d27063e1353175eb580abac.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

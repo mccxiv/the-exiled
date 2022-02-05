@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/building-woodcutter.vox-4182ffacc44d5c198b79cc71500c23d3.mesh"
+
+[deps]
+
+source_file="res://assets/vox/building-woodcutter.vox"
+dest_files=[ "res://.import/building-woodcutter.vox-4182ffacc44d5c198b79cc71500c23d3.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/human-villager - Copy.vox-a4d8de62d3109c1fe32af81914eac3af.mesh"
+
+[deps]
+
+source_file="res://assets/vox/human-villager - Copy.vox"
+dest_files=[ "res://.import/human-villager - Copy.vox-a4d8de62d3109c1fe32af81914eac3af.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

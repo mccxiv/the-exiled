@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/beach.vox-3d7a8cf24105a47296c753cd331858c8.mesh"
+
+[deps]
+
+source_file="res://assets/blocks/beach.vox"
+dest_files=[ "res://.import/beach.vox-3d7a8cf24105a47296c753cd331858c8.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

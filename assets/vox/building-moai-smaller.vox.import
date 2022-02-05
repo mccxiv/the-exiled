@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/building-moai-smaller.vox-2be3ef441e83fd2f1a6c5b345c87dcbf.mesh"
+
+[deps]
+
+source_file="res://assets/vox/building-moai-smaller.vox"
+dest_files=[ "res://.import/building-moai-smaller.vox-2be3ef441e83fd2f1a6c5b345c87dcbf.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
