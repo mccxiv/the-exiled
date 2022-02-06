@@ -99,7 +99,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The-exiled"
-run/main_scene="res://scenes/game/gridmap-game.tscn"
+run/main_scene="res://scenes/game/game.tscn"
 
 [autoload]
 

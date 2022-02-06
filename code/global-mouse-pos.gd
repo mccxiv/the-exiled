@@ -5,7 +5,7 @@ onready var ray := $RayCast
 onready var camera = get_viewport().get_camera()
 
 func _physics_process(delta):
-	# _print_tile_pos(get_viewport().get_mouse_position())
+	_print_tile_pos(get_viewport().get_mouse_position())
 
 func _print_tile_pos(click_position: Vector2) -> void:
 		var from = camera.project_ray_origin(click_position)
