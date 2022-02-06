@@ -8,12 +8,11 @@ onready var gridmap: GridMap = get_node('../../GridMap')
 onready var planks_pile: ResourcePile = Lib.find_of_type('ResourcePile', get_children())
 onready var building_metadata = Constants.Buildings[building_type]
 onready var planks_requirement: int = building_metadata['construction'].plank
+onready var building_scene: PackedScene = building_metadata['building']
 onready var piles: Array = [planks_pile]
 var progress: int = 0
-var BaseBuilding: PackedScene = preload("res://scenes/buildings/BaseBuilding.tscn")
 
 func _ready():
-	#replace_with_finished_building()
 	assert(planks_pile)
 	assert(building_metadata)
 	planks_pile.maximum = planks_requirement
@@ -31,11 +30,10 @@ func _on_plank_removed():
 
 func replace_with_finished_building():
 	var position = self.global_transform.origin
-	var building = BaseBuilding.instance()
-	building.building_type = building_type
-	building.desired_position = position
-	print('Constructed building will be placed at global:', building.desired_position)
-	print('Tile equivalent:', gridmap.world_to_map(building.desired_position))
+	var building: Spatial = building_scene.instance()
+	building.global_transform.origin = position
+	print('Constructed building will be placed at global:', position)
+	print('Tile equivalent:', gridmap.world_to_map(position))
 	get_parent().remove_child(self)
 	get_parent().add_child(building)
 	self.queue_free()

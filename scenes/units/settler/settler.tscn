@@ -1,14 +1,76 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/units/settler/settler_body.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/units/capabilities/CarrierCapabilities.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/units/capabilities/UnitCapabilities.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/units/settler/settler.gd" type="Script" id=5]
 
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("WorkerBody:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 90, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WorkerBody:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "walk"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("WorkerBody:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 90, 0 ), Vector3( -8.5, 99, 0 ), Vector3( 8.5, 81, 0 ), Vector3( 0, 90, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WorkerBody:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 2.29739, 1, 2.21914, 1 ),
+"update": 0,
+"values": [ Vector3( 0.1, 0, 0 ), Vector3( 0.1, 0.1, 0 ), Vector3( 0.1, -0.04, 0 ), Vector3( 0.1, 0.1, 0 ), Vector3( 0.1, 0, 0 ) ]
+}
+
 [node name="Settler" type="KinematicBody"]
 script = ExtResource( 5 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "walk"
+anims/RESET = SubResource( 2 )
+anims/walk = SubResource( 1 )
+
 [node name="WorkerBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.1, 0, 0 )
 
 [node name="UnitCapabilities" parent="." instance=ExtResource( 4 )]
 

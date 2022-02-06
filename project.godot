@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Spatial",
-"class": "BaseBuilding",
-"language": "GDScript",
-"path": "res://scenes/buildings/BaseBuilding.gd"
-}, {
 "base": "KinematicBody",
 "class": "Builder",
 "language": "GDScript",
@@ -74,13 +69,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/buildings/woodcutters_hut/woodcutters_hut.gd"
 }, {
+"base": "Spatial",
+"class": "WorkableBuilding",
+"language": "GDScript",
+"path": "res://scenes/buildings/shared/WorkableBuilding.gd"
+}, {
 "base": "Position3D",
 "class": "WorkerIdleLocation",
 "language": "GDScript",
 "path": "res://scenes/buildings/shared/WorkerIdleLocation.gd"
 } ]
 _global_script_class_icons={
-"BaseBuilding": "",
 "Builder": "",
 "BuilderCapabilities": "",
 "CarrierCapabilities": "",
@@ -93,6 +92,7 @@ _global_script_class_icons={
 "UnitCapabilities": "",
 "Woodcutter": "",
 "WoodcuttersHut": "",
+"WorkableBuilding": "",
 "WorkerIdleLocation": ""
 }
 
@@ -105,7 +105,6 @@ run/main_scene="res://scenes/game/gridmap-game.tscn"
 
 Lib="*res://code/lib.gd"
 Constants="*res://code/constants.gd"
-MinistryOfManpower="*res://code/MinistryOfManpower.gd"
 
 [debug]
 

@@ -5,13 +5,14 @@ var type = 'UnitCapabilities'
 
 var path = []
 var path_index = 0
-const move_speed = 2
+const move_speed = 1
 onready var unit: Spatial = get_parent() 
 onready var nav: MapNavigation = Lib.find_ancestor_of_type(self, 'MapNavigation')
+onready var animation_player: AnimationPlayer = $'../AnimationPlayer'
 
 func _ready():
 	assert(nav)
-	pass
+	if animation_player: animation_player.stop()
 
 func move_to (target: Spatial): 
 	var unit_pos = unit.global_transform.origin
@@ -40,6 +41,10 @@ func _physics_process(delta):
 		if move_vec.length() < 0.2:
 			path_index += 1
 		else:
+			if animation_player: 
+				if not animation_player.is_playing(): animation_player.play('walk')
 			unit.rotation.y = lerp(unit.rotation.y, atan2(-move_vec.x, -move_vec.z), delta * 5)
 			unit.move_and_slide(move_vec.normalized() * move_speed, Vector3.UP)
-	else: path = []
+	else: 
+		path = []
+		if animation_player: animation_player.play('RESET')

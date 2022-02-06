@@ -1,7 +1,7 @@
 extends Node
 
 func _ready():
-	timeout('_tick', 2)
+	timeout('_tick', 0.1)
 
 func _tick():
 	get_tree().call_group('ai', 'ai_update')

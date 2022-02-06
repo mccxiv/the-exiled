@@ -12,6 +12,7 @@ func get_buildings_that_need_worker() -> Array:
 	var buildings: Array = []
 	for building in all_buildings:
 		if not building.has_worker():
+			print('Found building that lacks worker')
 			buildings.append(building)
 	return buildings
 

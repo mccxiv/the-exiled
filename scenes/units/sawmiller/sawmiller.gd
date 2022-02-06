@@ -8,6 +8,7 @@ onready var logPile: ResourcePile = Lib.find_prop_eq('resource_type', 'log', res
 onready var plankPile: ResourcePile = Lib.find_prop_eq('resource_type', 'plank', resourcePiles)
 onready var idleLocation: WorkerIdleLocation = Lib.find_of_type('WorkerIdleLocation', Lib.get_siblings(self))
 var is_chopping = false
+var is_idle = false
 
 func ai_update(): 
 	if unit.is_moving(): return
@@ -22,8 +23,11 @@ func ai_update():
 			else: 
 				_go_to_idle_location()
 	elif _there_is_space_for_plank() && _logs_available(): 
+		is_idle = false
 		_pick_up_log()
+	elif is_idle: return
 	elif not _is_at_idle_location():
+		is_idle = true
 		_go_to_idle_location()
 	else: pass
 
@@ -41,6 +45,7 @@ func _is_at_idle_location() -> bool:
 	return unit.is_at(idleLocation)
 
 func _go_to_idle_location():
+	print('Going to idle location')
 	unit.move_to(idleLocation)
 
 func _pick_up_log():

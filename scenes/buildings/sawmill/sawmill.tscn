@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/blocks/building-sawmill-small.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://scenes/buildings/shared/WorkableBuilding.gd" type="Script" id=2]
 [ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/buildings/shared/WorkerIdleLocation.tscn" type="PackedScene" id=4]
 
 [node name="Sawmill" type="Spatial"]
+script = ExtResource( 2 )
+building_type = "sawmill"
 
 [node name="building-sawmill-small" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
@@ -20,4 +23,4 @@ transform = Transform( 0.913666, 0, 0.406466, 0, 1, 0, -0.406466, 0, 0.913666, 0
 resource_type = "plank"
 
 [node name="WorkerIdleLocation" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.691872, 0.502789, 0.762105 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.88016, 0.502789, -0.153958 )
