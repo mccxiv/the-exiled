@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://code/keybinds.gd" type="Script" id=1]
 [ext_resource path="res://scenes/units/settler/settler.tscn" type="PackedScene" id=2]
@@ -13,12 +13,22 @@
 [ext_resource path="res://scenes/navigation/MapNavigation.gd" type="Script" id=11]
 [ext_resource path="res://scenes/meshlib/blocks.meshlib" type="MeshLibrary" id=12]
 [ext_resource path="res://assets/blocks/water.vox" type="ArrayMesh" id=13]
+[ext_resource path="res://ui/FpsCounter.tscn" type="PackedScene" id=14]
+[ext_resource path="res://code/camera.gd" type="Script" id=15]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_energy = 0.6
 
 [node name="Game" type="Spatial"]
+
+[node name="FpsCounter" parent="." instance=ExtResource( 14 )]
+margin_left = 14.2705
+margin_top = 30.3247
+margin_right = 62.2976
+margin_bottom = 50.2708
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "FPS"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
@@ -37,6 +47,7 @@ directional_shadow_depth_range = 1
 transform = Transform( 0.386228, -0.577467, 0.719277, 0, 0.779786, 0.626046, -0.922404, -0.241796, 0.301175, 37.263, 37.024, 34.546 )
 projection = 1
 size = 15.29
+script = ExtResource( 15 )
 
 [node name="Keybinds" type="Node" parent="."]
 script = ExtResource( 1 )
@@ -67,7 +78,8 @@ margin_left = 12.784
 margin_top = 11.8921
 margin_right = 136.784
 margin_bottom = 25.8921
-text = "Global mouse pos: "
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "X, Y Tile"
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
