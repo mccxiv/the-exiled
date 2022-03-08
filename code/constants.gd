@@ -1,7 +1,7 @@
 tool
 extends Node
 
-var _placeholder_worker = preload('res://scenes/units/sawmiller/sawmiller.tscn')
+var _placeholder_worker = preload('res://scenes/buildings/sawmill/sawmiller.tscn')
 var _placeholder_building = preload('res://scenes/buildings/sawmill/sawmill.tscn')
 
 var Resources = [
@@ -14,21 +14,22 @@ var Buildings = {
 	'woodcutters_hut': {
 		'building': preload('res://scenes/buildings/woodcutters_hut/woodcutters_hut.tscn'),
 		'worker': preload('res://scenes/units/woodcutter/woodcutter.tscn'),
-		'construction': {'plank': 2},
-		'output': ['log']
+		'construction': {'plank': 2}
+	},
+	'foresters_hut': {
+		'building': preload('res://scenes/buildings/foresters_hut/foresters_hut.tscn'),
+		'worker': preload('res://scenes/buildings/foresters_hut/forester.tscn'),
+		'construction': {'plank': 3}
 	},
 	'sawmill': {
 		'building': preload('res://scenes/buildings/sawmill/sawmill.tscn'),
-		'worker': preload('res://scenes/units/sawmiller/sawmiller.tscn'),
-		'construction': {'plank': 3},
-		'input': ['log'],
-		'output': ['plank']
+		'worker': preload('res://scenes/buildings/sawmill/sawmiller.tscn'),
+		'construction': {'plank': 3}
 	},
 	'stonecutters_hut': {
 		'building': _placeholder_building,
 		'worker': _placeholder_worker,
-		'construction': {'plank': 2, 'stone': 2},
-		'output': ['plank']
+		'construction': {'plank': 2, 'stone': 2}
 	},
 	'brickworks': {
 		'building': _placeholder_building,

@@ -39,15 +39,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/items/resource_pile.gd"
 }, {
-"base": "MeshInstance",
-"class": "Sawmill",
-"language": "GDScript",
-"path": "res://scenes/buildings/sawmill/sawmill.gd"
-}, {
 "base": "KinematicBody",
 "class": "Sawmiller",
 "language": "GDScript",
-"path": "res://scenes/units/sawmiller/sawmiller.gd"
+"path": "res://scenes/buildings/sawmill/sawmiller.gd"
 }, {
 "base": "KinematicBody",
 "class": "Settler",
@@ -86,7 +81,6 @@ _global_script_class_icons={
 "ConstructionSite": "",
 "MapNavigation": "",
 "ResourcePile": "",
-"Sawmill": "",
 "Sawmiller": "",
 "Settler": "",
 "UnitCapabilities": "",

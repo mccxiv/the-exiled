@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/foresters_hut.vox-04f6062a93b5977113e599bb57c87748.mesh"
+
+[deps]
+
+source_file="res://assets/models/foresters_hut.vox"
+dest_files=[ "res://.import/foresters_hut.vox-04f6062a93b5977113e599bb57c87748.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

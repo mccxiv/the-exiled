@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/building-forester.vox-90c137458534f1b142377b5c3ebaf24a.mesh"
+
+[deps]
+
+source_file="res://assets/vox/building-forester.vox"
+dest_files=[ "res://.import/building-forester.vox-90c137458534f1b142377b5c3ebaf24a.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
