@@ -5,11 +5,11 @@
 [ext_resource path="res://scenes/items/resource_pile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/buildings/shared/WorkerIdleLocation.tscn" type="PackedScene" id=4]
 
-[node name="Sawmill" type="Spatial"]
+[node name="Building" type="Spatial"]
 script = ExtResource( 2 )
 building_type = "sawmill"
 
-[node name="building-sawmill-small" type="MeshInstance" parent="."]
+[node name="Model" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
 skeleton = NodePath("")
 material/0 = null

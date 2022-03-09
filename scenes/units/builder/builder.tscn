@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/units/builder/builder.gd" type="Script" id=1]
 [ext_resource path="res://scenes/units/capabilities/CarrierCapabilities.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/units/capabilities/BuilderCapabilities.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/units/capabilities/UnitCapabilities.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/units/settler/settler_body.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/models/builder.vox" type="ArrayMesh" id=6]
 
 [node name="Builder" type="KinematicBody"]
 script = ExtResource( 1 )
 
-[node name="WorkerBody" parent="." instance=ExtResource( 5 )]
+[node name="Model" parent="." instance=ExtResource( 5 )]
+mesh = ExtResource( 6 )
 
 [node name="UnitCapabilities" parent="." instance=ExtResource( 4 )]
 

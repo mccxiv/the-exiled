@@ -8,7 +8,7 @@
 script = ExtResource( 2 )
 building_type = "foresters_hut"
 
-[node name="model" type="MeshInstance" parent="."]
+[node name="Model" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
 skeleton = NodePath("")
 material/0 = null
