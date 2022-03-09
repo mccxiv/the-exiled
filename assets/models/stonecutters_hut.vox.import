@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/stonecutters_hut.vox-24ccd301f8350a295568e401afb175d6.mesh"
+
+[deps]
+
+source_file="res://assets/models/stonecutters_hut.vox"
+dest_files=[ "res://.import/stonecutters_hut.vox-24ccd301f8350a295568e401afb175d6.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

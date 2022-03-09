@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/residence_small.vox-eb074d7b4dabfd61e86fb051006bc69a.mesh"
+
+[deps]
+
+source_file="res://assets/models/residence_small.vox"
+dest_files=[ "res://.import/residence_small.vox-eb074d7b4dabfd61e86fb051006bc69a.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

@@ -26,6 +26,10 @@ var Buildings = {
 		'worker': preload('res://scenes/buildings/sawmill/sawmiller.tscn'),
 		'construction': {'plank': 3}
 	},
+	'residence_small': {
+		'building': preload('res://scenes/buildings/residences/residence_small.tscn'),
+		'construction': {'plank': 6, 'stone': 5}
+	},
 	'stonecutters_hut': {
 		'building': _placeholder_building,
 		'worker': _placeholder_worker,
